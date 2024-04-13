@@ -148,7 +148,7 @@ def summarize_articles_in_json(json_file_name):
 
     for i, article in enumerate(articles):
         print(f"({i+1}/{len(articles)}) - SUMMARIZING {article['title']}")
-        markdown_content = get_article_as_markdown(article['public_url'], STRATECHERY_ACCESS_TOKEN, article['title'])
+        markdown_content = get_article_as_markdown(article['public_url'], None, article['title'])
         summary = summarize_article(article['title'], markdown_content)
         article['summary'] = summary
         if i % 10 == 0 and i != 0:
@@ -177,7 +177,7 @@ def check_for_latest_articles(rss_feed_url, json_file_name, embed=True):
             print(f"NEW ARTICLE: {article['title']}")
 
             markdown_content = get_article_as_markdown(article['public_url'],
-                                                       STRATECHERY_ACCESS_TOKEN,
+                                                       None,
                                                        article['title'])
 
             summary = summarize_article(article['title'], markdown_content)
@@ -211,16 +211,19 @@ def check_for_latest_articles(rss_feed_url, json_file_name, embed=True):
 
 if __name__ == '__main__':
     dotenv.load_dotenv()
+    # TODO: try using Claude instead
     OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
-    STRATECHERY_RSS_ID = os.getenv('STRATECHERY_RSS_ID')
-    STRATECHERY_ACCESS_TOKEN = os.getenv('STRATECHERY_ACCESS_TOKEN')
+    # STRATECHERY_RSS_ID = os.getenv('STRATECHERY_RSS_ID')
+    # STRATECHERY_ACCESS_TOKEN = os.getenv('STRATECHERY_ACCESS_TOKEN')
 
     CHROMA_CLIENT = chromadb.PersistentClient('./chroma.db')
     CHROMA_COLLECTION = CHROMA_CLIENT.get_or_create_collection(
-        name="stratechery_articles",
+        name="wolfstreet_articles",
         embedding_function=embedding_functions.DefaultEmbeddingFunction(),
     )
-
-    check_for_latest_articles(f'https://stratechery.passport.online/feed/rss/{STRATECHERY_RSS_ID}',
+    
+    # TODO: Retrieve comments from https://wolfstreet.com/comments/feed/, perform sentiment analysis and summarize common themes
+    # also weight comments based on Wolf's response, if he responds with "RTGDFA" or "clickbait BS" to a comment, that comment should be regarded as lower quality.
+    check_for_latest_articles(f'https://wolfstreet.com/feed/',
                               'data.json',
                               embed=True)

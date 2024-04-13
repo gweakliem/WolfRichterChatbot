@@ -1,21 +1,21 @@
-# Ben Thompson Stratechery Chatbot
-[![Real-time Stratechery Article Updater](https://github.com/benfwalla/BenThompsonChatbot/actions/workflows/check_for_latest_articles.yml/badge.svg?event=schedule)](https://github.com/benfwalla/BenThompsonChatbot/actions/workflows/check_for_latest_articles.yml)
+# Wolf Richter Wolf Street Chatbot
+[![Real-time Wolf Street Article Updater](https://github.com/benfwalla/BenThompsonChatbot/actions/workflows/check_for_latest_articles.yml/badge.svg?event=schedule)](https://github.com/benfwalla/BenThompsonChatbot/actions/workflows/check_for_latest_articles.yml)
 
-## 🎈 [Use on Streamlit now!](https://unofficial-stratechery-chatbot.streamlit.app/)
-![Stratechery Chatbot](img/Stratechery%20Chatbot%20_%20Streamlit.jpeg)
+## 🎈 [Use on Streamlit now!](https://unofficial-WolfStreet-chatbot.streamlit.app/)
+![WolfStreet Chatbot](img/WolfStreet%20Chatbot%20_%20Streamlit.jpeg)
 
 ## What does this bot know?
-The bot knows about Ben Thompson, Stratechery, and the [Stratechery](https://stratechery.com/) articles listed in [data.json](data.json). 
+The bot knows about Wolf Richter, Wolf Street, and the [Wolf Street](https://wolfstreet.com/) articles listed in [data.json](data.json). 
 The oldest known article dates back to Nov 8, 2023.
 
 ## How was this bot built?
-- Stratechery articles were saved as markdown files, split into smaller chunks, and embedded in a [Chroma](https://www.trychroma.com/) database.
+- Wolf Street articles were saved as markdown files, split into smaller chunks, and embedded in a [Chroma](https://www.trychroma.com/) database.
 - On (almost) every query, the bot embeds your query, identifies the 7 most similar article chunks and 0-3 most relevant article summaries and places them into GPT's context to answer your question. This technique is known as *[Retreival-Augmented Generation (RAG)](https://stackoverflow.blog/2023/10/18/retrieval-augmented-generation-keeping-llms-relevant-and-current/)*.
 - RAG is far from perfect! I used the open-sourced [`all-MiniLM-L6-v2`](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) model to create the embeddings. I used it because it's free (I'm cheap) and has [good speed and performance](https://huggingface.co/blog/mteb) for what you're getting.
-- I removed all those markdown Stratechery articles from this repo out of respect to Ben Thompson.
+- I removed all those markdown Wolf Street articles from this repo out of respect to Wolf Richter.
 
 ### [data.py](data.py)
-data.py is a mess of a codebase that shows how I retrieved, chunked, and embedded the Stratechery articles
+data.py is a mess of a codebase that shows how I retrieved, chunked, and embedded the Wolf Street articles
 
 ### [chatbot.py](chatbot.py)
 chatbot.py is the UI logic for the Streamlit chatbot.
@@ -24,6 +24,6 @@ chatbot.py is the UI logic for the Streamlit chatbot.
 chatbot_helper.py is the helper functions for the Streamlit chatbot. This is where the magic happens with the GPT chat completions.
 
 ## Who built this bot?
-This bot was built by [Ben Wallace](https://twitter.com/DJbennyBuff). He's been a Stratechery subscriber for about 4 years. He wanted to build a chatbot from scratch and was inspired by the [LennyBot](https://www.lennybot.com/), a GPT bot trained on Lenny's Newsletters.
+This bot was built by [Gordon Weakliem](https://github.com/gweakliem). He's been a Wolf Street reader for about 4 years and donates to the site. He wanted to learn more about AI chatbots and RAG and this code was forked from the [StratecheryChatbot](https://unofficial-stratechery-chatbot.streamlit.app/), a GPT bot that uses RAG to provide information from the Stratechery weblog.
 
-_Disclaimer: This app is not affiliated with, endorsed by, or approved by Ben Thompson or Stratechery._
+_Disclaimer: This app is not affiliated with, endorsed by, or approved by Wolf Richter or Wolf Street._
