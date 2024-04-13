@@ -32,8 +32,8 @@ def summarize_article(article_title, markdown_content):
         section_completion = openai_client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
-                {"role": "system", "content": f"Summarize the following snippet of a Stratechery {article_type} in markdown. "
-                                              f"Use 'Ben' when describing the author and his points in the third person. Do not use descriptive clauses like 'in the interview,'. "
+                {"role": "system", "content": f"Summarize the following snippet of a Wolf Street {article_type} in markdown. "
+                                              f"Use 'Wolf' when describing the author and his points in the third person. Do not use descriptive clauses like 'in the interview,'. "
                                               f"Be concise and objective, with 3-5 sentences per section. Return a plain text paragraph, no formatting or new lines: {section_content}"}
             ]
         )
@@ -45,7 +45,7 @@ def summarize_article(article_title, markdown_content):
     article_completion = openai_client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": f"The following is a set of summaries from a Stratechery article split by its sections: {section_summaries} "
+            {"role": "system", "content": f"The following is a set of summaries from a Wolf Street article split by its sections: {section_summaries} "
                                           f"Take these and place it in a packaged, paragraph summary about the article. "
                                           f"In the event of an interview, intuit what the name abbreviations are from the section headers and use their names. "
                                           f"Mention the name of every section. The summary should use all the points mentioned below. "
