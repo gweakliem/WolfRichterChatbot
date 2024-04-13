@@ -48,8 +48,8 @@ jobs:
       - name: Commit and push changes if changes exist
         if: steps.changes.outputs.changes_exist == 'true'
         run: |
-          git config --global user.email "benfwalla@gmail.com"
-          git config --global user.name "Ben Wallace"
+          git config --global user.email "gordon.weakliem@gmail.com"
+          git config --global user.name "Gordon Weakliem"
           git add .
           git commit -m "Auto-add new article(s)"
           git push
