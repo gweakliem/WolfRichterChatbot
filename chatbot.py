@@ -29,7 +29,7 @@ with st.sidebar:
     gpt_model = st.selectbox('Select a Model', ('gpt-3.5-turbo', 'gpt-4-turbo-preview'))
     st.divider()
     with st.expander("What does this bot know?"):
-        st.write(f"The bot knows about Wolf Richter, [Wolf Street](https://wolfstreet.com/), and the {NUM_ARTICLES} most recent Wolf Street articles. The oldest known article dates back to Nov 8, 2023. **It was last updated on {MOST_RECENT_ARTICLE_DATE}.**")
+        st.write(f"The bot knows about Wolf Richter, [Wolf Street](https://wolfstreet.com/), and the {NUM_ARTICLES} most recent Wolf Street articles. The oldest known article dates back to 05 Apr 2024. **It was last updated on {MOST_RECENT_ARTICLE_DATE}.**")
     with st.expander("How was this bot built?"):
         st.write(f"""
         - You can find the code **[here](https://github.com/gweakliem/WolfRichterChatbot)**.
@@ -59,7 +59,7 @@ with st.sidebar:
     st.caption(f"Most recent known article: [{MOST_RECENT_ARTICLE_TITLE}]({MOST_RECENT_ARTICLE_URL}) ({MOST_RECENT_ARTICLE_DATE})")
 
 # CHATBOT
-st.title("Wolf Richter Wolf Street Chatbot")
+st.title("Unofficial Wolf Street Chatbot")
 st.caption(f"_Ask me anything about Wolf Street! I'm have knowledge on the {NUM_ARTICLES} most recent articles._")
 
 
