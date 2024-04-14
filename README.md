@@ -2,7 +2,7 @@
 [![Real-time Wolf Street Article Updater](https://github.com/benfwalla/BenThompsonChatbot/actions/workflows/check_for_latest_articles.yml/badge.svg?event=schedule)](https://github.com/benfwalla/BenThompsonChatbot/actions/workflows/check_for_latest_articles.yml)
 
 ## 🎈 [Use on Streamlit now!](https://unofficial-wolfstreet-chatbot.streamlit.app/)
-![WolfStreet Chatbot](img/WolfStreet%20Chatbot%20_%20Streamlit.jpeg)
+![WolfStreet Chatbot](img/WolfStreetChatbotScreenshot.png)
 
 ## What does this bot know?
 The bot knows about Wolf Richter, Wolf Street, and the [Wolf Street](https://wolfstreet.com/) articles listed in [data.json](data.json). 
