@@ -52,7 +52,7 @@ with st.sidebar:
         Anthropic's Claude [also has function calling](https://docs.anthropic.com/claude/docs/functions-external-tools) that I should check out.
         """)
     with st.expander("Who built this bot?"):
-        st.write("This bot was built by [Gordon Weakliem](https://github.com/gweakliem). He's been a Wolf Street reader for about 4 years and while Wolf Street has no paywall, he has [contributed voluntarily](https://wolfstreet.com/how-to-donate-to-wolf-street/) and encourages you to do the same if you find Wolf's articles useful. He wanted to experiment with RAG and LLMtraining and was inspired by the [BenThompsonChatbot](https://github.com/benfwalla/BenThompsonChatbot), an experimantel RAG approach using Ben Thompson's Newsletters.")
+        st.write("This bot was built by [Gordon Weakliem](https://github.com/gweakliem). He's been a Wolf Street reader for about 4 years and while Wolf Street has no paywall, he has [contributed voluntarily](https://wolfstreet.com/how-to-donate-to-wolf-street/) and encourages you to do the same if you find Wolf's articles useful. He wanted to experiment with RAG and LLMs and used the [BenThompsonChatbot](https://github.com/benfwalla/BenThompsonChatbot) as a starting point.")
     st.divider()
     st.caption("_Disclaimer: This app is not affiliated with, endorsed by, or approved by Wolf Richter or Wolf Street._")
     st.caption(f"Last updated: {MOST_RECENT_ARTICLE_DATE}")
