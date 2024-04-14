@@ -9,10 +9,10 @@ from datetime import datetime
 
 dotenv.load_dotenv()
 
-if os.getenv('IS_CLOUD') == 'true':
-    __import__('pysqlite3')
-    import sys
-    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+#if os.getenv('IS_CLOUD') == 'true':
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 openai_client = OpenAI()
