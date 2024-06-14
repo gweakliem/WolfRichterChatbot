@@ -21,12 +21,12 @@ if "messages" not in st.session_state:
 
 # SIDEBAR
 APP_DESCRIPTION = f"""
-- It is *not* approved by Wolf Richter or any Wolf Street affiliates.
+Chatbot that summarizes and analyzes posts from the WolfStreet.com site - It is *not* approved by Wolf Richter or any Wolf Street affiliates.
 """
 
 openai_client = OpenAI()
 with st.sidebar:
-    gpt_model = st.selectbox('Select a Model', ('gpt-3.5-turbo', 'gpt-4-turbo-preview'))
+    gpt_model = st.selectbox('Select a Model', ('gpt-3.5-turbo', 'gpt-4-turbo'))
     st.divider()
     with st.expander("What does this bot know?"):
         st.write(f"The bot knows about Wolf Richter, [Wolf Street](https://wolfstreet.com/), and the {NUM_ARTICLES} most recent Wolf Street articles. The oldest known article dates back to 05 Apr 2024. **It was last updated on {MOST_RECENT_ARTICLE_DATE}.**")
@@ -37,7 +37,7 @@ with st.sidebar:
         - On (almost) every query, the bot embeds your query, identifies the 7 most similar article chunks, and places them into GPT's context to answer your question. This technique is known as *[Retreival-Augmented Generation (RAG)](https://stackoverflow.blog/2023/10/18/retrieval-augmented-generation-keeping-llms-relevant-and-current/)*.
         - I used the open-sourced [`all-MiniLM-L6-v2`](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) model to create the embeddings. I used it because it's free (I'm cheap) and has [good speed and performance](https://huggingface.co/blog/mteb) for what you're getting.
         """)
-    with st.expander("Why did you use RAG to retrieve the articles?"):
+    with st.expander("Why did you use RAG to query the LLM?"):
         st.write(f"""
         Imagine trying to copy & paste all Wolf Street articles into ChatGPT... you'll get an error! This is because GPT's _context_ can only fit so much.
         RAG solves this by being a simple search engine: based on the user's text, RAG finds the most similar chunks of text from all Wolf Street articles. We then
@@ -60,7 +60,7 @@ with st.sidebar:
 
 # CHATBOT
 st.title("Unofficial Wolf Street Chatbot")
-st.caption(f"_Ask me anything about Wolf Street! I'm have knowledge on the {NUM_ARTICLES} most recent articles._")
+st.caption(f"_Ask me anything about Wolf Street! I have knowledge on the {NUM_ARTICLES} most recent articles._")
 
 
 def add_message_and_respond(prompt):

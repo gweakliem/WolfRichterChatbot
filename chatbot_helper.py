@@ -88,7 +88,7 @@ TOOLS = [
 
 
 @traceable(run_type="llm")
-def call_openai(messages, model="gpt-3.5-turbo"):
+def call_openai(messages, model):
     return openai_client.chat.completions.create(
         model=model,
         messages=messages,
@@ -160,7 +160,7 @@ def combine_summaries_and_chunks(summaries, chunks):
 def create_chat_completion_with_rag(query_text, message_chain, openai_model):
     message_chain.append({"role": "user", "content": query_text})
 
-    completion = call_openai(message_chain)
+    completion = call_openai(message_chain, openai_model)
     response_message = completion.choices[0].message
     tool_calls = response_message.tool_calls
     print("\n\n")
