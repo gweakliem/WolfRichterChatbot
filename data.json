@@ -1,5 +1,12 @@
 [
     {
+        "title": "Why We\u2019ll Replace the Case-Shiller Home Price Index for Our Series, \u201cThe Most Splendid Housing Bubbles in America\u201d",
+        "public_url": "https://wolfstreet.com/?p=98390",
+        "publish_date": "Mon, 02 Sep 2024 05:45:17 +0000",
+        "file_location": "./data/Why We\u2019ll Replace the Case-Shiller Home Price Index for Our Series, \u201cThe Most Splendid Housing Bubbles in America\u201d.md",
+        "summary": "The Wolf Street article, \"Why We\u2019ll Replace the Case-Shiller Home Price Index for Our Series, 'The Most Splendid Housing Bubbles in America,'\" discusses the transition from the Case-Shiller Home Price Index to a more suitable metric for tracking housing market dynamics. Since 2017, the series \"The Most Splendid Housing Bubbles in America\" has monitored home price inflation influenced by the Federal Reserve's interest rate policies. The series highlighted home price surges due to near-zero interest rates from 2020 to mid-2022, driven by cheap mortgages. Wolf Street identified three main limitations of the Case-Shiller data: its coverage of only 20 metros, a 3-4 month data publication lag, and its use of index values instead of actual dollar prices, making it less suitable for current market analysis. The Case-Shiller index, published by S&P Global, was historically valuable but has not expanded or improved in timeliness. The article introduces the \u201craw\u201d Zillow Home Value Index (ZHVI) as a replacement. ZHVI draws from millions of data points, including historical prices, MLS, brokerages, and households, and accounts for both off-market and for-sale-by-owner deals. Unlike Zillow's forward-looking estimates, ZHVI is a backward-looking index responsive to market changes, albeit more volatile. It is analyzed by Census Metropolitan Statistical Area (MSA) and focuses on \"typical homes,\" including single-family houses and condos. An example from the Austin MSA shows a 0.4% decline in \"typical home value\" to $460,000 in July, reflecting a 4.6% year-over-year decrease and an 18.9% drop from the June 2022 peak. The Case-Shiller index, which does not cover Austin, lacks price visibility and its data will be available later.\n"
+    },
+    {
         "title": "Our Drunken Sailors Are at it Again, Not at All in the Mood for a Slowdown or a Recession",
         "public_url": "https://wolfstreet.com/?p=98370",
         "publish_date": "Fri, 30 Aug 2024 20:37:14 +0000",
