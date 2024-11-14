@@ -133,12 +133,12 @@ def split_article_into_chunks(article_content, article_title, chunk_size=1000):
     chunks_with_ids = []
     for i, chunk in enumerate(chunks):
         chunk_id = f"{i}_{article_title}"
-        image_url = extract_image_url(chunk.page_content)
-        if not image_url is None:
-            image_text = analyze_image(image_url)
-            chunk.page_content = enrich_image_url(
-                image_url, image_text, chunk.page_content
-            )
+        # image_url = extract_image_url(chunk.page_content)
+        # if not image_url is None:
+        #     image_text = analyze_image(image_url)
+        #     chunk.page_content = enrich_image_url(
+        #         image_url, image_text, chunk.page_content
+        #     )
         chunk_data = {"chunk_id": chunk_id, "page_content": chunk.page_content}
         chunks_with_ids.append(chunk_data)
 
