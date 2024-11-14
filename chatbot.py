@@ -26,7 +26,7 @@ Chatbot that summarizes and analyzes posts from the WolfStreet.com site - It is 
 
 openai_client = OpenAI()
 with st.sidebar:
-    gpt_model = st.selectbox('Select a Model', ('gpt-3.5-turbo', 'gpt-4-turbo'))
+    gpt_model = st.selectbox('Select a Model', ('gpt-4o', 'gpt-4o-mini', 'gpt-4-turbo'))
     st.divider()
     with st.expander("What does this bot know?"):
         st.write(f"The bot knows about Wolf Richter, [Wolf Street](https://wolfstreet.com/), and the {NUM_ARTICLES} most recent Wolf Street articles. The oldest known article dates back to 05 Apr 2024. **It was last updated on {MOST_RECENT_ARTICLE_DATE}.**")

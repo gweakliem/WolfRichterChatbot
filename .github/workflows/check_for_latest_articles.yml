@@ -10,6 +10,10 @@ on:
     types:
       - webhook_check_for_latest_articles
 
+  push:
+    branches:
+      - 'main'
+
 jobs:
   update_articles:
     runs-on: ubuntu-latest

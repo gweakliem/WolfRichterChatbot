@@ -16,7 +16,7 @@ headers_to_split_on = [
 
 
 def summarize_article(article_title, markdown_content):
-    """Summarizes the content of a given markdown string using OpenAI's GPT-3.5 model and map-reduce approach"""
+    """Summarizes the content of a given markdown string using OpenAI's GPT-4 model and map-reduce approach"""
     if "* * *" in markdown_content:
         markdown_content = "".join(markdown_content.split("* * *")[:-1])
 

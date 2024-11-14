@@ -199,6 +199,6 @@ if __name__ == '__main__':
         {'role': 'system', 'content': SYSTEM_MESSAGE}
     ]
 
-    print(create_chat_completion_with_rag("Who is Wolf Richter?", test_messages, 'gpt-3.5-turbo'))
-    print(create_chat_completion_with_rag("What does Wolf think about the inflation?", test_messages, 'gpt-3.5-turbo'))
+    print(create_chat_completion_with_rag("Who is Wolf Richter?", test_messages, 'gpt-4o-mini'))
+    print(create_chat_completion_with_rag("What does Wolf think about the inflation?", test_messages, 'gpt-4o-minigpt-4o-mini'))
     print(fetch_article_summaries(["Our Drunken Sailors", "Commentary on consumer spending in the early 2020s, which Wolf refers to as 'Drunken Sailors'"]))
