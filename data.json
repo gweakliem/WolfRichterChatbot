@@ -1,5 +1,12 @@
 [
     {
+        "title": "About that Retail Sales Plunge in the Headlines: A Romp through the Massive Seasonal Adjustments this Time of the Year",
+        "public_url": "https://wolfstreet.com/?p=102150",
+        "publish_date": "Fri, 14 Feb 2025 20:13:28 +0000",
+        "file_location": "./data/About that Retail Sales Plunge in the Headlines: A Romp through the Massive Seasonal Adjustments this Time of the Year.md",
+        "summary": "The Wolf Street article \"About that Retail Sales Plunge in the Headlines: A Romp through the Massive Seasonal Adjustments this Time of the Year\" by Wolf Richter delves into the intricacies of retail sales data and the effects of seasonal adjustments, particularly focusing on January's figures. The section titled \"By Wolf Richter for WOLF STREET\" explains that although headlines reported a plunge in month-on-month retail sales due to a 0.9% decline after adjustment, actual sales increased by 4.8% year-over-year, evidencing the impact of seasonal trends. Richter emphasizes that although non-seasonally adjusted sales fell by 16.5% month-over-month, this fluctuation is normal given historical January sales declines ranging from 15% to 22%. The following section, \"Seasonal adjustments at the Big Three,\" illustrates how various retail sectors, such as auto and parts dealers, nonstore retailers, and food services, experience distinct seasonal patterns. For instance, auto dealers see their lowest sales in January, nonstore retailers drop sharply after December holidays, and food services record lower sales during winter months. Despite such declines, year-over-year sales for these categories grew, showcasing robust consumer activity. Finally, in \"So what does this mean?\", Richter concludes that the 4.8% year-over-year rise in January's retail sales does not indicate any significant change in consumer behavior, as fluctuations are expected and typically do not reflect broader economic trends. The article argues that examining year-over-year figures rather than month-to-month changes provides a clearer picture of retail sales trends, attributing discrepancies in data interpretation to extensive seasonal adjustments like those made using the Census Bureau\u2019s X-13 ARIMA-SEATS program."
+    },
+    {
         "title": "Household Debts, Debt-to-Income Ratio, Serious Delinquencies, Collections, Foreclosures, Bankruptcies: Our Drunken Sailors\u2019 Debts in Q4 2024",
         "public_url": "https://wolfstreet.com/?p=102132",
         "publish_date": "Fri, 14 Feb 2025 01:46:34 +0000",
