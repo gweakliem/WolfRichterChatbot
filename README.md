@@ -27,3 +27,14 @@ chatbot_helper.py is the helper functions for the Streamlit chatbot. This is whe
 This bot was built by [Gordon Weakliem](https://github.com/gweakliem). He's been a Wolf Street reader for about 4 years and donates to the site. He wanted to learn more about AI chatbots and RAG and this code was forked from the [StratecheryChatbot](https://unofficial-stratechery-chatbot.streamlit.app/), a GPT bot that uses RAG to answer questions about the Stratechery weblog.
 
 _Disclaimer: This app is not affiliated with, endorsed by, or approved by Wolf Richter or Wolf Street._
+
+## Develpment Notes
+
+The original StratecheryChatbot that this was forked from used the pysqlite3-binary package. This package does not provide binaries for Apple Silicon (M1/M2...), so I had to use pysqlite3 instead. To install the depenedencies on OSX, install sqlite3 with `brew install sqlite3` and then set the environment like this:
+
+```
+export LDFLAGS="-L/opt/homebrew/opt/sqlite/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/sqlite/include"
+```
+
+Simon Willison also has some [related info](https://til.simonwillison.net/sqlite/pysqlite3-on-macos) that was helpful in debugging this.
