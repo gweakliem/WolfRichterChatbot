@@ -29,7 +29,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests python-dotenv feedparser chromadb langchain openai
+          pip install requests python-dotenv feedparser chromadb langchain openai langchain-text-splitters
 
       - name: Run data.py
         id: script
