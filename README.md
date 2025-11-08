@@ -4,6 +4,10 @@
 ## 🎈 [Use on Streamlit now!](https://unofficial-wolfstreet-chatbot.streamlit.app/)
 ![WolfStreet Chatbot](img/WolfStreetChatbotScreenshot.png)
 
+Note: I've run into storage limitations on the Chromadb file (Git LFS is now required) so I am no no longer aggregating new content in the Strealit deployment. This is now just for reference.
+
+If you want to fork this repo, you should instead clone it and create a new one. You can't apply Git LFS to a downstream fork, and I was faced with either deleting and recreating this repo, or stopping aggregation. 
+
 ## What does this bot know?
 The bot knows about Wolf Richter, Wolf Street, and the [Wolf Street](https://wolfstreet.com/) articles listed in [data.json](data.json). 
 The oldest known article dates back to 05 Apr 2024.

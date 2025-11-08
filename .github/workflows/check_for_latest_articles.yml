@@ -2,9 +2,9 @@ name: Check for Latest Articles
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 4 * * *'  # Runs at 4:00 UTC (10 pm MT) every day-of-week
-    - cron: '0 18 * * *'  # Runs at 18:00 UTC (12 pm MT) every day-of-week
+  # schedule:
+  #   - cron: '0 4 * * *'  # Runs at 4:00 UTC (10 pm MT) every day-of-week
+  #   - cron: '0 18 * * *'  # Runs at 18:00 UTC (12 pm MT) every day-of-week
 
   repository_dispatch:
     types:
